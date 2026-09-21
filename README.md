@@ -1,1 +1,1 @@
-# sistemes_imformátics
+# sistemes_informátics
