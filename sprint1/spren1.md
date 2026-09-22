@@ -4,3 +4,4 @@
 
 <img width="1329" height="916" alt="image" src="https://github.com/user-attachments/assets/656bf519-453e-417f-8729-2112e2921888" />
 
+<img width="1329" height="916" alt="Captura de pantalla de 2026-09-21 13-07-41" src="https://github.com/user-attachments/assets/2e9c4215-7ea1-4b92-985f-1da9f56715dc" />
