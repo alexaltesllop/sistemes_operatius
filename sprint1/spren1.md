@@ -16,8 +16,6 @@
 
 <img width="1348" height="928" alt="Captura de pantalla de 2026-09-21 13-10-13" src="https://github.com/user-attachments/assets/3fb28960-2be2-43d1-9e44-4ba9857cf43f" />
 
-<img width="1348" height="928" alt="Captura de pantalla de 2026-09-21 13-10-13" src="https://github.com/user-attachments/assets/949842f0-e8df-41fb-a2d4-7484bb7a771a" />
-
 <img width="1348" height="928" alt="Captura de pantalla de 2026-09-21 13-13-06" src="https://github.com/user-attachments/assets/877ee4c3-fb20-41d8-9d75-841bb089386f" />
 
 <img width="1348" height="928" alt="Captura de pantalla de 2026-09-21 13-13-31" src="https://github.com/user-attachments/assets/e60aaaff-1e0e-43d1-822f-26ed6647d3ff" />
