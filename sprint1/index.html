@@ -12,7 +12,7 @@
   <nav class="hero-nav">
     <a href="../index.html">Portada</a>
     <a href="../sprints.html">Índex de sprints</a>
-    <a href="https://github.com/" target="_blank" rel="noopener">Codi a GitHub ↗</a>
+    <a href="https://github.com/alexaltesllop/sistemes_operatius" target="_blank" rel="noopener">Codi a GitHub ↗</a>
   </nav>
   <div class="hero-titol">
     <p class="miguetes"><a href="../index.html">Portada</a> / <a href="../sprints.html">Índex de sprints</a> / Sprint 1</p>
@@ -42,103 +42,107 @@
 
     <article class="apartat" id="apartat1">
       <h2>1. Instal·lació del sistema operatiu</h2>
-      <p>Arrencada des del suport d'instal·lació i recorregut per l'assistent. <strong>El pas del disc és irreversible</strong>, així que revisa bé la destinació.</p>
+      <p>Instal·lació d'Ubuntu en una màquina virtual de VirtualBox, arrencant des de la imatge ISO i seguint l'assistent pas a pas.</p>
       <ul>
-        <li>Arrencar des del USB o la imatge ISO.</li>
-        <li>Triar l'idioma i la distribució de teclat.</li>
+        <li>Arrencar la màquina virtual des de la imatge ISO d'Ubuntu.</li>
+        <li>Triar «Instal·lar Ubuntu» i la instal·lació interactiva.</li>
+        <li>Utilitzar la connexió per cable i la selecció d'aplicacions predeterminada, sense programari privatiu addicional.</li>
+        <li>Crear el compte d'usuari i el nom de l'equip.</li>
         <li>Esperar que finalitzi la còpia d'arxius i reiniciar.</li>
       </ul>
-      <img src="../img/captura1.png" alt="Captura de pantalla: Instal·lació del sistema operatiu">
-      <img src="../img/captura7.png" alt="Captura de pantalla: Instal·lació del sistema operatiu">
-      <img src="../img/captura8.png" alt="Captura de pantalla: Instal·lació del sistema operatiu">
-      <img src="../img/captura9.png" alt="Captura de pantalla: Instal·lació del sistema operatiu">
-      <img src="../img/captura10.png" alt="Captura de pantalla: Instal·lació del sistema operatiu">
-      <img src="../img/captura11.png" alt="Captura de pantalla: Instal·lació del sistema operatiu">
-      <img src="../img/captura5.png" alt="Captura de pantalla: Instal·lació del sistema operatiu">
-      <img src="../img/captura6.png" alt="Captura de pantalla: Instal·lació del sistema operatiu">
+      <img src="../img/captura1.png" alt="Captura de pantalla: inici de la instal·lació d'Ubuntu">
+      <img src="../img/captura7.png" alt="Captura de pantalla: connexió a Internet durant la instal·lació">
+      <img src="../img/captura8.png" alt="Captura de pantalla: triar entre provar o instal·lar Ubuntu">
+      <img src="../img/captura9.png" alt="Captura de pantalla: tipus d'instal·lació interactiva">
+      <img src="../img/captura10.png" alt="Captura de pantalla: selecció d'aplicacions predeterminada">
+      <img src="../img/captura11.png" alt="Captura de pantalla: programari privatiu recomanat sense marcar">
+      <img src="../img/captura5.png" alt="Captura de pantalla: creació del compte d'usuari">
+      <img src="../img/captura6.png" alt="Captura de pantalla: escriptori d'Ubuntu un cop instal·lat">
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
     <article class="apartat" id="apartat2">
       <h2>2. Punts de restauració</h2>
-      <p>Com crear i recuperar un punt de restauració abans de fer canvis importants al sistema.</p>
+      <p>A VirtualBox els punts de restauració es fan amb <strong>instantànies</strong>, que permeten tornar la màquina a un estat anterior si un canvi surt malament.</p>
       <ul>
-        <li>Crear un punt de restauració (o una instantània).</li>
-        <li>Fer un canvi de prova al sistema.</li>
-        <li>Restaurar i comprovar que s'ha desfet.</li>
+        <li>Crear la instantània «Abanç_canvi» abans de fer canvis al sistema.</li>
+        <li>Fer un canvi de prova (per exemple, crear un fitxer).</li>
+        <li>Restaurar la instantània i comprovar que el canvi s'ha desfet.</li>
       </ul>
-      <img src="../img/captura14.png" alt="Captura de pantalla: Instal·lació del sistema operatiu">
+      <img src="../img/captura14.png" alt="Captura de pantalla: instantània Abanç_canvi creada a VirtualBox">
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
     <article class="apartat" id="apartat3">
       <h2>3. Particions</h2>
-      <p>Estructura de particions del disc i punts de muntatge triats durant la instal·lació.</p>
+      <p>He fet una instal·lació manual sobre un disc virtual de 50 GB (53,69 GB a l'instal·lador), en lloc d'esborrar tot el disc, per separar el sistema de les dades.</p>
       <ul>
-        <li>Revisar el disc amb <code>lsblk</code> o <code>fdisk -l</code>.</li>
-        <li>Descriure cada partició i el seu sistema d'arxius.</li>
-        <li>Comprovar el muntatge amb <code>df -h</code>.</li>
+        <li><code>sda1</code>: 30 GB, Ext4, muntada a <code>/</code> (arrel).</li>
+        <li><code>sda3</code>: 15 GB, Ext4, muntada a <code>/home</code>.</li>
+        <li><code>sda4</code>: 8,68 GB, àrea d'intercanvi (swap).</li>
+        <li><code>sda2</code>: partició d'1,05 MB creada per l'instal·lador.</li>
       </ul>
-      <img src="../img/captura12.png" alt="Captura de pantalla: Instal·lació del sistema operatiu">
-      <img src="../img/captura13.png" alt="Captura de pantalla: Instal·lació del sistema operatiu">
+      <img src="../img/captura12.png" alt="Captura de pantalla: configuració del disc, instal·lació manual">
+      <img src="../img/captura13.png" alt="Captura de pantalla: particionament manual amb sda1, sda3 i sda4">
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
     <article class="apartat" id="apartat4">
       <h2>4. Virtualització</h2>
-      <p>Creació de la màquina virtual a VirtualBox i configuració dels recursos assignats.</p>
+      <p>Creació de la màquina virtual a VirtualBox amb la imatge ISO d'Ubuntu i els recursos assignats.</p>
       <ul>
-        <li>Crear la màquina virtual i assignar memòria i CPU.</li>
-        <li>Afegir el disc virtual i la imatge ISO.</li>
-        <li>Instal·lar els complements d'amfitrió.</li>
+        <li>Nom, carpeta i imatge ISO de la màquina virtual.</li>
+        <li>Memòria base i 2 CPU.</li>
+        <li>Disc dur virtual nou de 50 GB en format VDI.</li>
+        <li>Xarxa en mode NAT (adaptador Intel PRO/1000 MT Desktop).</li>
       </ul>
-      <img src="../img/captura2.png" alt="Captura de pantalla: Instal·lació del sistema operatiu">
-      <img src="../img/captura3.png" alt="Captura de pantalla: Instal·lació del sistema operatiu">
-      <img src="../img/captura4.png" alt="Captura de pantalla: Instal·lació del sistema operatiu">
+      <img src="../img/captura2.png" alt="Captura de pantalla: nom, ISO i sistema operatiu de la màquina virtual">
+      <img src="../img/captura3.png" alt="Captura de pantalla: memòria base i nombre de CPU">
+      <img src="../img/captura4.png" alt="Captura de pantalla: creació del disc dur virtual de 50 GB">
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
     <article class="apartat" id="apartat5">
       <h2>5. Gestors d'arrencada</h2>
-      <p>Funcionament del gestor d'arrencada i com es tria el sistema operatiu a l'inici.</p>
+      <p>Ubuntu utilitza <strong>GRUB</strong>. S'executa després de la BIOS/UEFI i carrega el nucli del sistema.</p>
       <ul>
-        <li>Identificar el gestor instal·lat (per exemple, GRUB).</li>
-        <li>Consultar la configuració d'arrencada.</li>
-        <li>Comprovar l'ordre d'arrencada dels sistemes.</li>
+        <li>Configuració editable a <code>/etc/default/grub</code>.</li>
+        <li><code>GRUB_TIMEOUT_STYLE=hidden</code> i <code>GRUB_TIMEOUT=0</code>: el menú no es mostra i Ubuntu s'inicia directament.</li>
+        <li><code>GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"</code>: arrencada amb pantalla gràfica.</li>
+        <li>Després de canviar la configuració s'ha d'executar <code>sudo update-grub</code>.</li>
       </ul>
-      <img src="../img/captura15.png" alt="Captura de pantalla: Instal·lació del sistema operatiu">
-      <img src="../img/captura16.png" alt="Captura de pantalla: Instal·lació del sistema operatiu">
+      <img src="../img/captura15.png" alt="Captura de pantalla: contingut de /etc/default/grub">
+      <img src="../img/captura16.png" alt="Captura de pantalla: gestor d'arrencada">
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
     <article class="apartat" id="apartat6">
       <h2>6. Xarxa bàsica</h2>
-      <p>Configuració de xarxa mínima per poder actualitzar el sistema i instal·lar programari.</p>
+      <p>Comprovació de la xarxa de la màquina virtual, configurada en mode NAT.</p>
       <ul>
-        <li>Comprovar l'adreça IP amb <code>ip a</code>.</li>
-        <li>Configurar una IP estàtica si el servei ho requereix.</li>
-        <li>Verificar la connectivitat amb <code>ping</code>.</li>
+        <li>Consultar la interfície i l'adreça IP amb <code>ip a</code>.</li>
+        <li>Verificar la connexió a Internet amb <code>ping -c 4 google.com</code>.</li>
       </ul>
-      <img src="../img/captura17.png" alt="Captura de pantalla: Instal·lació del sistema operatiu">
-      <img src="../img/captura18.png" alt="Captura de pantalla: Instal·lació del sistema operatiu">
+      <img src="../img/captura17.png" alt="Captura de pantalla: resultat de la comanda ip a">
+      <img src="../img/captura18.png" alt="Captura de pantalla: resultat de ping a google.com">
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
     <article class="apartat" id="apartat7">
       <h2>7. Comandes generals</h2>
-      <p>Resum de les ordres bàsiques de terminal que s'han fet servir durant el sprint.</p>
+      <p>Ordres bàsiques de terminal que he utilitzat a la màquina virtual.</p>
       <ul>
         <li>Navegació: <code>pwd</code>, <code>ls</code>, <code>cd</code>.</li>
-        <li>Fitxers: <code>cp</code>, <code>mv</code>, <code>rm</code>, <code>mkdir</code>.</li>
+        <li>Crear una carpeta: <code>mkdir prova</code>.</li>
         <li>Informació del sistema: <code>uname -a</code>, <code>whoami</code>.</li>
       </ul>
-      <img src="../img/captura19.png" alt="Captura de pantalla: Instal·lació del sistema operatiu">
+      <img src="../img/captura19.png" alt="Captura de pantalla: comandes bàsiques a la terminal">
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
     <article class="apartat" id="apartat8">
       <h2>8. Instal·lacions d'aplicacions</h2>
-      <p>Instal·lació de programari addicional amb el gestor de paquets i comprovació del resultat.</p>
+      <p>Instal·lació del programa <code>tree</code> amb el gestor de paquets <code>apt</code>.</p>
       <ul>
-        <li>Actualitzar els repositoris amb <code>apt update</code>.</li>
-        <li>Instal·lar un paquet amb <code>apt install</code>.</li>
-        <li>Comprovar que l'aplicació s'executa correctament.</li>
+        <li>Actualitzar els repositoris amb <code>sudo apt update</code>.</li>
+        <li>Instal·lar el paquet amb <code>sudo apt install tree</code>.</li>
+        <li>Comprovar que funciona amb <code>tree --version</code>.</li>
       </ul>
-      <img src="../img/captura20.png" alt="Captura de pantalla: Instal·lació del sistema operatiu">
-      <img src="../img/captura21.png" alt="Captura de pantalla: Instal·lació del sistema operatiu">
+      <img src="../img/captura20.png" alt="Captura de pantalla: sudo apt update i sudo apt install tree">
+      <img src="../img/captura21.png" alt="Captura de pantalla: tree --version funcionant">
       <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
     </article>
   </section>
@@ -151,7 +155,7 @@
     </a>
     <span>Contingut sota llicència <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" target="_blank" rel="license noopener">CC BY-NC-SA 4.0</a></span>
   </p>
-  <p class="autoria">Autor/a: <strong>Nom Cognom1 Cognom2</strong> · Pràctica 0 · Sistemes Operatius (ISOPJ1)</p>
+  <p class="autoria">Autor/a: <strong>Àlex Altés Llop</strong> · Pràctica 0 · Sistemes Operatius (ISOPJ1)</p>
 </footer>
 
 </body>
