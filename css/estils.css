@@ -4,15 +4,15 @@
    <link rel="stylesheet" href="css/estils.css">      (des de l'arrel) */
 
 :root {
-  --mari: #122542;
-  --teal: #0c6e73;
-  --ambre: #c9821f;
-  --tinta: #1b2430;
-  --tinta-suau: #57626c;
-  --fons: #f5f6f8;
+   --mari: #0b1f3f;        
+  --teal: #2a5db0;       
+  --ambre: #4d6d99;      
+  --tinta: #14202e;
+  --tinta-suau: #5a6b80;
+  --fons: #f3f6fa;
   --blanc: #ffffff;
-  --vora: #dde2e7;
-  --radi: 12px;
+  --vora: #d9e1ec;
+  --radi: 14px;
 }
 
 * { box-sizing: border-box; }
@@ -28,18 +28,23 @@ body {
 a { color: var(--teal); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
+
+
 .contenidor {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
+  box-shadow: 0 8px 30px rgba(11, 31, 63, 0.08); 
 }
 
 /* ---------- Capçalera / hero (present a totes les pàgines) ---------- */
 .hero {
-  background: linear-gradient(125deg, var(--mari) 0%, var(--teal) 55%, var(--ambre) 100%);
+  background: linear-gradient(125deg, var(--mari) 0%, var(--teal) 60%, var(--ambre) 100%);
   padding-bottom: 60px;
   color: var(--blanc);
+  border-bottom: 3px solid #7fb2ff;
 }
+
 
 .hero-nav {
   display: flex;
