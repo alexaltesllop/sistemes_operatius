@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sprint 1 · Instal·lació i configuració inicial (Ubuntu)</title>
+<link rel="stylesheet" href="../css/estils.css">
+</head>
+<body>
+
+<header class="hero">
+  <nav class="hero-nav">
+    <a href="../index.html">Portada</a>
+    <a href="../sprints.html">Índex de sprints</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">Codi a GitHub ↗</a>
+  </nav>
+  <div class="hero-titol">
+    <p class="miguetes"><a href="../index.html">Portada</a> / <a href="../ubuntu.html">Ubuntu</a> / Sprint 1</p>
+    <h1>Sprint 1 · Instal·lació i configuració inicial</h1>
+    <p class="subtitol">Índex d'apartats d'aquest sprint: Ubuntu</p>
+  </div>
+</header>
+
+<main class="contenidor">
+  <section class="panell">
+    <a id="index-apartats"></a>
+
+    <div class="resum-sprint">
+      <div class="dada"><strong>8</strong><span>apartats</span></div>
+      <div class="dada"><strong>1</strong><span>sistema: Ubuntu</span></div>
+      <div class="dada"><strong>VirtualBox</strong><span>entorn de treball</span></div>
+    </div>
+
+    <p class="titol-index">Índex d'apartats</p>
+    <div class="rejilla-targetes quatre-cols">
+
+      <a class="targeta" href="#instalacio-so">
+        <div class="targeta-cap"><div class="icona">💿</div><span class="numero">1</span></div>
+        <h3>Instal·lació SO</h3>
+        <p>Assistent d'Ubuntu pas a pas →</p>
+      </a>
+
+      <a class="targeta" href="#punts-restauracio">
+        <div class="targeta-cap"><div class="icona">🕘</div><span class="numero">2</span></div>
+        <h3>Punts de restauració</h3>
+        <p>Instantànies de la màquina →</p>
+      </a>
+
+      <a class="targeta" href="#particions">
+        <div class="targeta-cap"><div class="icona">🗂️</div><span class="numero">3</span></div>
+        <h3>Particions</h3>
+        <p>Particionat manual del disc →</p>
+      </a>
+
+      <a class="targeta" href="#virtualitzacio">
+        <div class="targeta-cap"><div class="icona">🖥️</div><span class="numero">4</span></div>
+        <h3>Virtualització</h3>
+        <p>Creació de la VM a VirtualBox →</p>
+      </a>
+
+      <a class="targeta" href="#gestors-arrencada">
+        <div class="targeta-cap"><div class="icona">🚀</div><span class="numero">5</span></div>
+        <h3>Gestors d'arrencada</h3>
+        <p>Configuració de GRUB →</p>
+      </a>
+
+      <a class="targeta" href="#xarxa-basica">
+        <div class="targeta-cap"><div class="icona">🌐</div><span class="numero">6</span></div>
+        <h3>Xarxa bàsica</h3>
+        <p>Adreça IP i comprovació amb ping →</p>
+      </a>
+
+      <a class="targeta" href="#comandes-generals">
+        <div class="targeta-cap"><div class="icona">⌨️</div><span class="numero">7</span></div>
+        <h3>Comandes generals</h3>
+        <p>Moure's pel terminal →</p>
+      </a>
+
+      <a class="targeta" href="#instalacions-aplicacions">
+        <div class="targeta-cap"><div class="icona">📦</div><span class="numero">8</span></div>
+        <h3>Instal·lacions d'aplicacions</h3>
+        <p>Gestió de paquets amb apt →</p>
+      </a>
+
+    </div>
+
+    <!-- ===================== 1. INSTAL·LACIÓ SO ===================== -->
+    <article class="apartat" id="instalacio-so">
+      <h2><span class="num">1</span>Instal·lació del sistema operatiu</h2>
+      <p class="intro">Instal·lació d'Ubuntu en una màquina virtual de VirtualBox, arrencant des de la imatge ISO i seguint l'assistent pas a pas.</p>
+
+      <h3 class="sub-so"><span class="etiqueta-so ubuntu">UBUNTU</span> Instal·lació d'Ubuntu</h3>
+      <ul>
+        <li>Arrencar la màquina virtual des de la imatge ISO d'Ubuntu.</li>
+        <li>Triar «Instal·lar Ubuntu» i la instal·lació interactiva.</li>
+        <li>Utilitzar la connexió per cable i la selecció d'aplicacions predeterminada, sense programari privat addicional.</li>
+      </ul>
+
+      <div class="galeria numerada">
+        <figure>
+          <a href="../img/captura7.png" target="_blank" rel="noopener"><img src="../img/captura7.png" alt="Pantalla de connexió a Internet de l'instal·lador d'Ubuntu" loading="lazy"></a>
+          <figcaption><strong>Connexió a Internet</strong>Utilitzar la connexió per cable.</figcaption>
+        </figure>
+        <figure>
+          <a href="../img/captura8.png" target="_blank" rel="noopener"><img src="../img/captura8.png" alt="Pantalla per triar entre provar o instal·lar Ubuntu" loading="lazy"></a>
+          <figcaption><strong>Provar o instal·lar</strong>Triar «Instal·lar Ubuntu».</figcaption>
+        </figure>
+        <figure>
+          <a href="../img/captura9.png" target="_blank" rel="noopener"><img src="../img/captura9.png" alt="Pantalla del tipus d'instal·lació d'Ubuntu" loading="lazy"></a>
+          <figcaption><strong>Tipus d'instal·lació</strong>Instal·lació interactiva.</figcaption>
+        </figure>
+        <figure>
+          <a href="../img/captura10.png" target="_blank" rel="noopener"><img src="../img/captura10.png" alt="Pantalla de selecció d'aplicacions" loading="lazy"></a>
+          <figcaption><strong>Aplicacions</strong>Selecció predeterminada.</figcaption>
+        </figure>
+        <figure>
+          <a href="../img/captura11.png" target="_blank" rel="noopener"><img src="../img/captura11.png" alt="Pantalla de programari privat recomanat, sense cap opció marcada" loading="lazy"></a>
+          <figcaption><strong>Programari privat</strong>Sense marcar cap opció addicional.</figcaption>
+        </figure>
+        <figure>
+          <a href="../img/captura5.png" target="_blank" rel="noopener"><img src="../img/captura5.png" alt="Pantalla de creació del compte d'usuari" loading="lazy"></a>
+          <figcaption><strong>Compte d'usuari</strong>Nom, equip, usuari i contrasenya.</figcaption>
+        </figure>
+      </div>
+
+      <div class="galeria una numerada" style="counter-reset: pas 6;">
+        <figure>
+          <a href="../img/captura6.png" target="_blank" rel="noopener"><img src="../img/captura6.png" alt="Escriptori d'Ubuntu un cop acabada la instal·lació" loading="lazy"></a>
+          <figcaption><strong>Resultat</strong>Escriptori d'Ubuntu funcionant a la màquina virtual.</figcaption>
+        </figure>
+      </div>
+
+      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
+    </article>
+
+    <!-- ===================== 2. PUNTS DE RESTAURACIÓ ===================== -->
+    <article class="apartat" id="punts-restauracio">
+      <h2><span class="num">2</span>Punts de restauració</h2>
+      <p class="intro">Guardar l'estat del sistema abans d'un canvi per poder tornar enrere si alguna cosa falla.</p>
+
+      <h3 class="sub-so"><span class="etiqueta-so ubuntu">UBUNTU</span> Instantànies a VirtualBox</h3>
+      <p>A la màquina virtual d'Ubuntu es crea una <strong>instantània</strong> abans de fer canvis. Si cal, es pot restaurar l'estat guardat.</p>
+      <div class="galeria una">
+        <figure>
+          <a href="../img/captura14.png" target="_blank" rel="noopener"><img src="../img/captura14.png" alt="VirtualBox mostrant la instantània Abanç_canvi de la màquina Ubuntu" loading="lazy"></a>
+          <figcaption><strong>Instantània «Abanç_canvi»</strong>Punt de restauració creat a la màquina Ubuntu abans de fer canvis.</figcaption>
+        </figure>
+      </div>
+
+      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
+    </article>
+
+    <!-- ===================== 3. PARTICIONS ===================== -->
+    <article class="apartat" id="particions">
+      <h2><span class="num">3</span>Particions</h2>
+      <p class="intro">Durant la instal·lació d'Ubuntu s'ha triat la instal·lació manual per definir les particions del disc.</p>
+
+      <h3 class="sub-so"><span class="etiqueta-so ubuntu">UBUNTU</span> Particionat manual</h3>
+      <table class="taula-dades">
+        <thead>
+          <tr><th>Partició</th><th>Tipus</th><th>Punt de muntatge</th><th>Mida</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>sda1</code></td><td>Ext4</td><td><code>/</code></td><td>30,00 GB</td></tr>
+          <tr><td><code>sda3</code></td><td>Ext4</td><td><code>/home</code></td><td>15,00 GB</td></tr>
+          <tr><td><code>sda4</code></td><td>Swap</td><td>—</td><td>8,68 GB</td></tr>
+        </tbody>
+      </table>
+
+      <div class="galeria numerada">
+        <figure>
+          <a href="../img/captura12.png" target="_blank" rel="noopener"><img src="../img/captura12.png" alt="Pantalla de configuració del disc amb la instal·lació manual seleccionada" loading="lazy"></a>
+          <figcaption><strong>Instal·lació manual</strong>Opció per definir les particions a mà.</figcaption>
+        </figure>
+        <figure>
+          <a href="../img/captura13.png" target="_blank" rel="noopener"><img src="../img/captura13.png" alt="Taula de particions amb arrel, home i swap" loading="lazy"></a>
+          <figcaption><strong>Taula de particions</strong><code>/</code>, <code>/home</code> i swap.</figcaption>
+        </figure>
+      </div>
+
+      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
+    </article>
+
+    <!-- ===================== 4. VIRTUALITZACIÓ ===================== -->
+    <article class="apartat" id="virtualitzacio">
+      <h2><span class="num">4</span>Virtualització</h2>
+      <p class="intro">Creació de la màquina virtual a VirtualBox amb la imatge ISO d'Ubuntu.</p>
+      <span class="etiqueta-so ubuntu">UBUNTU</span>
+
+      <ul class="xips">
+        <li><strong>Programari:</strong> VirtualBox</li>
+        <li><strong>Disc dur:</strong> VDI de 30 GB</li>
+        <li><strong>CPU:</strong> 2</li>
+      </ul>
+
+      <div class="galeria numerada">
+        <figure>
+          <a href="../img/captura1.png" target="_blank" rel="noopener"><img src="../img/captura1.png" alt="Assistent de màquina virtual nova a VirtualBox amb nom i imatge ISO" loading="lazy"></a>
+          <figcaption><strong>Nom i imatge ISO</strong>Nom de la màquina i ISO d'Ubuntu.</figcaption>
+        </figure>
+        <figure>
+          <a href="../img/captura3.png" target="_blank" rel="noopener"><img src="../img/captura3.png" alt="Configuració de memòria base i processadors" loading="lazy"></a>
+          <figcaption><strong>Maquinari</strong>Memòria base i nombre de CPU.</figcaption>
+        </figure>
+        <figure>
+          <a href="../img/captura4.png" target="_blank" rel="noopener"><img src="../img/captura4.png" alt="Creació del disc dur virtual de 30 GB" loading="lazy"></a>
+          <figcaption><strong>Disc dur virtual</strong>Disc VDI de 30 GB.</figcaption>
+        </figure>
+      </div>
+
+      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
+    </article>
+
+    <!-- ===================== 5. GESTORS D'ARRENCADA ===================== -->
+    <article class="apartat" id="gestors-arrencada">
+      <h2><span class="num">5</span>Gestors d'arrencada</h2>
+      <p class="intro">Revisió de la configuració de GRUB, el gestor d'arrencada d'Ubuntu.</p>
+      <span class="etiqueta-so ubuntu">UBUNTU</span>
+
+      <div class="comanda"><span class="p">$</span> cat /etc/default/grub</div>
+      <div class="comanda"><span class="p">$</span> ls /boot/grub</div>
+
+      <div class="galeria numerada">
+        <figure>
+          <a href="../img/captura15.png" target="_blank" rel="noopener"><img src="../img/captura15.png" alt="Contingut del fitxer /etc/default/grub al terminal" loading="lazy"></a>
+          <figcaption><strong>/etc/default/grub</strong>Fitxer de configuració de GRUB.</figcaption>
+        </figure>
+        <figure>
+          <a href="../img/captura16.png" target="_blank" rel="noopener"><img src="../img/captura16.png" alt="Final del fitxer de GRUB i llistat de /boot/grub" loading="lazy"></a>
+          <figcaption><strong>/boot/grub</strong>Contingut de la carpeta de GRUB.</figcaption>
+        </figure>
+      </div>
+
+      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
+    </article>
+
+    <!-- ===================== 6. XARXA BÀSICA ===================== -->
+    <article class="apartat" id="xarxa-basica">
+      <h2><span class="num">6</span>Xarxa bàsica</h2>
+      <p class="intro">Comprovació de l'adreça IP de la màquina i de la connexió a Internet.</p>
+      <span class="etiqueta-so ubuntu">UBUNTU</span>
+
+      <div class="comanda"><span class="p">$</span> ip a</div>
+      <div class="comanda"><span class="p">$</span> ping google.com</div>
+
+      <ul class="xips">
+        <li><strong>Interfície:</strong> enp0s3</li>
+        <li><strong>IP:</strong> 10.0.2.15/24</li>
+        <li><strong>Ping:</strong> 4 paquets, 0% perduts</li>
+      </ul>
+
+      <div class="galeria numerada">
+        <figure>
+          <a href="../img/captura17.png" target="_blank" rel="noopener"><img src="../img/captura17.png" alt="Sortida de la comanda ip a" loading="lazy"></a>
+          <figcaption><strong>ip a</strong>Adreces de les interfícies de xarxa.</figcaption>
+        </figure>
+        <figure>
+          <a href="../img/captura18.png" target="_blank" rel="noopener"><img src="../img/captura18.png" alt="Sortida de la comanda ping a google.com" loading="lazy"></a>
+          <figcaption><strong>ping google.com</strong>Comprovació de la connexió.</figcaption>
+        </figure>
+      </div>
+
+      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
+    </article>
+
+    <!-- ===================== 7. COMANDES GENERALS ===================== -->
+    <article class="apartat" id="comandes-generals">
+      <h2><span class="num">7</span>Comandes generals</h2>
+      <p class="intro">Comandes bàsiques per moure's pel sistema i consultar informació.</p>
+      <span class="etiqueta-so ubuntu">UBUNTU</span>
+
+      <ul class="xips">
+        <li><code>cd</code></li>
+        <li><code>pwd</code></li>
+        <li><code>mkdir</code></li>
+        <li><code>ls</code></li>
+        <li><code>uname -a</code></li>
+        <li><code>whoami</code></li>
+      </ul>
+
+      <div class="galeria una">
+        <figure>
+          <a href="../img/captura19.png" target="_blank" rel="noopener"><img src="../img/captura19.png" alt="Terminal amb les comandes cd, pwd, mkdir, ls, uname i whoami" loading="lazy"></a>
+          <figcaption><strong>Sessió al terminal</strong>Navegació, creació d'una carpeta i informació del sistema i de l'usuari.</figcaption>
+        </figure>
+      </div>
+
+      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
+    </article>
+
+    <!-- ===================== 8. INSTAL·LACIONS D'APLICACIONS ===================== -->
+    <article class="apartat" id="instalacions-aplicacions">
+      <h2><span class="num">8</span>Instal·lacions d'aplicacions</h2>
+      <p class="intro">Instal·lació de programari des dels repositoris d'Ubuntu amb <code>apt</code>.</p>
+      <span class="etiqueta-so ubuntu">UBUNTU</span>
+
+      <div class="comanda"><span class="p">$</span> sudo apt update</div>
+      <div class="comanda"><span class="p">$</span> sudo apt install tree</div>
+      <div class="comanda"><span class="p">$</span> tree --version</div>
+
+      <div class="galeria numerada">
+        <figure>
+          <a href="../img/captura20.png" target="_blank" rel="noopener"><img src="../img/captura20.png" alt="Terminal executant sudo apt update i sudo apt install tree" loading="lazy"></a>
+          <figcaption><strong>Actualitzar i instal·lar</strong><code>apt update</code> i <code>apt install tree</code>.</figcaption>
+        </figure>
+        <figure>
+          <a href="../img/captura21.png" target="_blank" rel="noopener"><img src="../img/captura21.png" alt="Terminal amb la instal·lació de tree acabada i la seva versió" loading="lazy"></a>
+          <figcaption><strong>Comprovació</strong>Versió de <code>tree</code> un cop instal·lat.</figcaption>
+        </figure>
+      </div>
+
+      <p class="tornar-index"><a href="#index-apartats">↑ Tornar a l'índex</a></p>
+    </article>
+
+  </section>
+</main>
+
+<footer class="peu">
+  <p class="peu-llicencia">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" target="_blank" rel="license noopener">
+      <img src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png" alt="Llicència Creative Commons Reconeixement-NoComercial-CompartirIgual 4.0" width="88" height="31">
+    </a>
+    <span>Contingut sota llicència <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ca" target="_blank" rel="license noopener">CC BY-NC-SA 4.0</a></span>
+  </p>
+  <p class="autoria">Autor/a: <strong>Àlex Altés Llop</strong> · Pràctica 0 · Sistemes Operatius (ISOPJ1)</p>
+</footer>
+
+</body>
+</html>
